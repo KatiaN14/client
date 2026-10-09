@@ -1,4 +1,4 @@
-import { PaginatedData } from '../../core/model/page/PaginatedData';
+import { PaginatedData } from '../../core/model/page/paginated-data';
 import { Author } from './author';
 
 export const AUTHOR_DATA: PaginatedData<Author> = {

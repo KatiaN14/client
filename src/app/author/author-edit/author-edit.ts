@@ -6,7 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-//import { validateFields } from '../../core/helpers/validation.helper';
+import { validateFields } from '../../core/helpers/validation.helper';
 
 @Component({
     selector: 'app-author-edit',
@@ -25,9 +25,9 @@ export class AuthorEdit implements OnInit {
     protected readonly nationality = signal<string | null>(null);
 
     loadFormData(initialData: Author | null) {
-        this.id.set(initialData.id ?? null);
-        this.name.set(initialData.name ?? null);
-        this.nationality.set(initialData.nationality ?? null);
+        this.id.set(initialData?.id ?? null);
+        this.name.set(initialData?.name ?? null);
+        this.nationality.set(initialData?.nationality ?? null);
     }
 
     ngOnInit(): void {
@@ -42,9 +42,9 @@ export class AuthorEdit implements OnInit {
         const requiredFields = ["name", "nationality"] as const
         const data = { name, nationality }
 
-        /*if (!validateFields(data, requiredFields)) {
+        if (!validateFields(data, requiredFields)) {
             return;
-        }*/
+        }
 
         const author = {
             id,

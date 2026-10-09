@@ -1,4 +1,4 @@
-import { SortPage } from './SortPage';
+import { SortPage } from './sort-page';
 
 export interface Pageable {
     pageNumber: number;

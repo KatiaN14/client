@@ -5,7 +5,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { AuthorEdit } from '../author-edit/author-edit';
 import { AuthorService } from '../author.service';
 import { Author } from '../model/author';
-import { Pageable } from '../../core/model/page/Pageable';
+import { Pageable } from '../../core/model/page/pageable';
 import { DialogConfirmation } from '../../core/dialog-confirmation/dialog-confirmation';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
